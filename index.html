@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIQUOR WORLD</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body{
+            background-color: rgb(97, 97, 97);
+            
+        }
+
+
+
+
+        .navbar-brand img{
+            width: 50px;
+            height: 50px;
+            
+        }
+        .nav-item{
+            font-family:'Times New Roman';
+            font-size: 15px;
+            margin-left: 10px;
+        }
+        .login-btn {
+            margin-left: 25%;
+            padding: 10px;
+            font-family: 'Times New Roman', Times, serif;
+            border: none;
+            transition: background-color 0.3s;
+            border-radius: 20px;
+        }
+
+        .login-btn {
+            background-color: #614444;
+            color: white;
+        }
+
+        .login-btn:hover {
+            background-color: #615236;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        .jumbotron {
+            background-image: url(imag/negristo.jpeg);
+            background-size: cover;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            height: 400px;
+        
+        }
+
+        .lead{
+            font-size: 16px;
+            margin-bottom: 3px;
+        }
+
+
+        .jumbotron img{
+            width: 40px;
+            height: 40px;
+            
+        }
+        .jumbotron .btn{
+            background-color: rgb(56, 54, 54);
+            color: white;
+            border-radius: 15px;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+
+        
+
+
+
+
+        
+        
+
+        .product-card {
+            margin-bottom: 30px;
+            color: rgb(236, 233, 233);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .container .cardn{
+          
+          border-radius: 20px;
+          text-align: center;
+          background-color: rgb(129, 127, 123);
+
+        }
+
+        .cardn img{
+            border-radius: 20px 20px 0 0;
+        }
+
+
+
+
+
+
+
+        .caferico{
+            width: 50px;
+            height: 50px; 
+            margin-top: -8px;
+        }
+
+        .cafenegro{
+            width: 60px;
+            height: 60px;
+            
+        }
+
+        .card-img{
+            max-height: 70vh;
+           object-fit: cover;
+           border: none;
+           
+    
+        
+        }
+
+         .card-titlem{
+            color: white;
+            text-align: center;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin-top: 90px;
+            font-style: italic;
+           
+        }
+
+
+
+
+
+
+
+
+
+
+        .featured-product {
+            margin: 40px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9f9f9a2;
+        }
+
+        .featured-product img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .product-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .product-description {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .product-description h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .product-description p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .btn-view-more {
+            background-color: #a5773b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            margin-bottom: 20px;
+        }
+
+        .btn-view-more:hover {
+            background-color: #dbb06f;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .card{
+            background-color: rgb(58, 57, 57);
+
+        }
+        .discount-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgb(124, 93, 53);
+            color: white;
+            padding: 5px 10px;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+    
+        span{
+            text-decoration:line-through;
+            color: #b36e6e;
+            margin-left: 20px;
+            
+        
+            
+            
+        }
+
+        .n{
+            display: inline-block;
+            
+            font-weight: bold;
+        }
+         
+        .add-to-cart-btn {
+            background-color: #a17d50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border-radius: 10px;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #745733;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+
+        .display-4{
+            font-family:'Times New Roman';
+           
+        }
+        
+        h1{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            margin-bottom: 30px;
+            color: white;
+        }
+        
+        .card-body{
+            padding-bottom: 40px;
+        }
+
+       
+    
+        
+
+
+
+
+
+        
+
+       
+        .carousel-inner .Instalación1 {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        hr{
+            border: 5px solid rgba(255, 255, 255, 0.801);
+            width: 300px;
+            border-radius: 50px;
+        }
+
+
+
+
+
+
+        
+
+
+
+        .order-section {
+            background-image: url(imag/Granosss.jpeg) ;
+           
+            padding: 40px;
+            margin-top: 30px;
+            border-radius: 10px;
+            margin-bottom: 50px;
+            color: white;
+        }
+
+
+
+
+
+
+
+
+
+
+        .testimonial-carousel {
+            margin-left: 50px;
+            margin: auto;
+            background-color: #423728;
+            border-radius: 10px;
+            color: white;
+            margin-bottom: 50px;
+            padding-bottom: 20px;
+
+        }
+        .testimonial-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+          
+        }
+
+        .testimonial-content {
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .carousel-indicators li {
+            background-color: #000000;
+        }
+
+       h4{
+        font-family: 'Times New Roman', Times, serif;
+        padding-top: 20px;
+       }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .footer {
+            background-color: #181818;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        #footer a{
+            color: rgb(233, 230, 227);
+           
+        }
+
+        #footer img{
+            width: 30px;
+            height: 30px;
+        }
+
+
+
+
+
+
+        
+        
+
+
+        
+        
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#"><img src="MUEBLE.webp" alt="x"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto md-lg-5">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Menú</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Eventos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">localízanos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Contactanos</a>
+                </li>
+            </ul>
+            <button class="login-btn" onclick="window.location.href='Registra.html'">Iniciar Sesión o registrarse</button>
+             
+        </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron text-center">
+        <img src="luis.jpg" alt="m">
+        <h1 class="display-4">LIQUOR WORLD</h1>
+            ________   <img src="LIMON.webp" alt="cad">  _________
+        <p class="lead">"Un tequila para el frio de no tenerte conmigo"</p>
+        <p class="lead">Descubre nuestros productos exclusivos con increíbles descuentos.</p>
+        <a href="#" class="btn">Explorar Novedades</a>
+    </div>
+    
+
+    <!------Otro-->
+    <H1>TOP CATEGORIAS</H1>
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-md-4 product-card">
+                <div class="cardn">
+                    <img src="Jose.png" class="card-img-top" alt="Cold Brew">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title"> TEQUILA JOSE CUERVO </h5>
+                        <p class="card-text">35% y los 40% grados</p>
+                        <button type="button" class="btn btn-link">Ver mas</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product-card">
+                <div class="cardn">
+                    <img src="Crema.jpg" class="card-img-top" alt="Matcha Latte">
+                 
+                    <div class="card-body">
+                        <h5 class="card-title">TEQUILA QUITA PENAS</h5>
+                        <p class="card-text">38% grados</p>
+                        <button type="button" class="btn btn-link">Ver mas</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product-card">
+                <div class="cardn">
+                    <img src="SUSU.jpg" class="card-img-top" alt="Vegan Dessert">
+                   
+                    <div class="card-body">
+                        <h5 class="card-title">TEQUILA JOSE CUERVO</h5>
+                        <p class="card-text">35% y los 40% grados</p>
+                        <button type="button" class="btn btn-link">Ver mas</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---Fin de otro-->
+    <div class="Collage">
+      <div class="card text-bg-dark">
+        <img src="luis.jpg" class="card-img" alt="...">
+        <div class="card-img-overlay">
+            <p class="card-text"><img src="LALZ.webp"  class="caferico"></p>
+
+          
+        </div>
+      </div>
+    </div>
+
+
+
+    <section class="container">
+        <h1 class="text-center my-5">LOS MAS VENDIDOS</h1>
+
+        <!-- Producto 1 -->
+        <div class="featured-product">
+            <div class="row">
+                <div class="col-md-6 product-description">
+                    <h3>Bacardi ron limon</h3>
+                    <p>37% grados</p>
+                    <button class="btn-view-more" onclick="showMoreInfo('LICOR')">Ver más</button>
+                </div>
+                <div class="col-md-6">
+                    <img src="Bacardi.jpg" alt="X5G4IXXH5OIGGCHIG5NCG5CI">
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="featured-product">
+            <div class="row">
+                <div class="col-md-6 product-description">
+                    <h3>Ron flor de caña amarilla</h3>
+                    <p>40% grados</p>
+                    <button class="btn-view-more" onclick="showMoreInfo('LICOR')">Ver más</button>
+                </div>
+                <div class="col-md-6">
+                    <img src="FLOR DE CAÑA AMARILLA.webp" alt="HJKHMRI430,UXG58R"> 
+                </div>
+            </div>
+        </div>
+
+
+        <div class="featured-product">
+            <div class="row">
+                <div class="col-md-6 product-description">
+                    <h3>Ron flor de caña blanco</h3>
+                    <p>40% grados</p>
+                    <button class="btn-view-more" onclick="showMoreInfo('LICOR')">Ver más</button>
+                </div>
+                <div class="col-md-6">
+                    <img src="flor DE CAÑA BLANCA.jpg" alt="3CHX5IT83I65CNIY5VNKGLEYJK G N45ERT,GMMGB,KTNG MCM">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- Sección de Novedades -->
+    <section class="container my-5">
+        <h1 class="text-center mb-4">PRODUCTOS DISPONIBLES</h1>
+        <div class="row">
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <img src="Michters.jpg" class="card-img-top" alt="Cold Brew">
+                    <div class="discount-badge">33% OFF</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Michters</h5>
+                        <p class="card-text">Whisky</p>
+                        <p class="n">L650 <p class="n"><span>L800</span></p> </p> 
+                        <button class="add-to-cart-btn">Añadir producto</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <img src="chambre.jpg" class="card-img-top" alt="Matcha Latte">
+                    <div class="discount-badge">15% OFF</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Appleton Estate</h5>
+                        <p class="card-text">Whisky de jamaica</p>
+                        <p class="n">L500 <p class="n"><span>L1000</span></p> </p> 
+                        <button class="add-to-cart-btn">Añadir producto</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <img src="MAAALIBU.jpg" class="card-img-top" alt="Vegan Dessert">
+                    <div class="discount-badge">20% OFF</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Ron Malibu</h5>
+                        <p class="card-text">Ron de piña</p>
+                        <p class="n">L200 <p class="n"><span>L500</span></p> </p> 
+                        <button class="add-to-cart-btn">Añadir producto</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <img src="chacha.webp" class="card-img-top" alt="Matcha Latte">
+                    <div class="discount-badge">15% OFF</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Diplomatico</h5>
+                        <p class="card-text">Ron de frutos seco</p>
+                        <p class="n">L950<p class="n"><span>L2000</span></p> </p> 
+                        <button class="add-to-cart-btn">Añadir producto</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <img src="coca.jpeg" class="card-img-top" alt="Matcha Latte">
+                    <div class="discount-badge">15% OFF</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Ron Appleton</h5>
+                        <p class="card-text">Ron de tabaco y cafe</p>
+                        <p class="n">L300 <p class="n"><span>L600</span></p> </p> 
+                        <button class="add-to-cart-btn">Añadir producto</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product-card">
+                <div class="card">
+                    <img src="negra.jpg" class="card-img-top" alt="Matcha Latte">
+                    <div class="discount-badge">15% OFF</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Ron Negrita dorado</h5>
+                        <p class="card-text">Ron caña de azucar</p>
+                        <p class="n">L500 <p class="n"><span>L800</span></p> </p> 
+                        <button class="add-to-cart-btn">Añadir producto</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!------Intalacioness-->
+    <section class="container my-5">
+        <h1 class="text-center mb-4">Nuestra Instalacion</h1>
+        <div id="carouselGallery" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselGallery" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselGallery" data-slide-to="1"></li>
+                <li data-target="#carouselGallery" data-slide-to="2"></li>
+                <li data-target="#carouselGallery" data-slide-to="3"></li>
+                <li data-target="#carouselGallery" data-slide-to="4"></li>
+                <li data-target="#carouselGallery" data-slide-to="5"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="chunte.webp" class="Instalación1">
+                </div>
+                <div class="carousel-item">
+                    <img src="LALZ.webp" class="Instalación1">
+                </div>
+                <div class="carousel-item">
+                    <img src="LIMON.webp" class="Instalación1">
+                </div>
+                <div class="carousel-item">
+                    <img src="MUEBLE.webp"class="Instalación1" >
+                </div>
+                <div class="carousel-item">
+                    <img src="ALEXIS.webp" class="Instalación1">
+                </div>
+                <div class="carousel-item">
+                    <img src="Jord.webp"class="Instalación1" >
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselGallery" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselGallery" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+        </div>
+    </section>
+
+    <hr></hr>
+
+
+    <section class="container order-section">
+        <h2 class="text-center mb-4">Ordena Tu Pedido Aquí</h2>
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputName">Nombre</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Nombre">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputEmail">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Correo Electrónico">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputProduct">Producto</label>
+                <select id="inputProduct" class="form-control">
+                    <option selected>Elige un producto o añadelo</option>
+                    <option>RON</option>
+                    <option>LICORES</option>
+                    <option>RON</option>
+                    <option>LICORES</option>
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="inputMessage">Mensaje o Instrucciones Adicionales</label>
+                <textarea class="form-control" id="inputMessage" rows="3" placeholder="Escribe aquí tus instrucciones"></textarea>
+            </div>
+            <button type="submit" class="btn btn-dark btn-block">Enviar Pedido</button>
+        </form>
+    </section>
+
+    <section class="container testimonial-carousel">
+        <h4 class="text-center mb-4">COMENTARIOS</h4>
+        <div id="carouselTestimonials" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselTestimonials" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselTestimonials" data-slide-to="1"></li>
+                <li data-target="#carouselTestimonials" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <img src="OIP.jpeg" class="testimonial-img" alt="Cliente 1">
+                        <div>
+                            <p class="testimonial-content">SON BUENAS BEBIDAS</p>
+                            <p class="testimonial-author">- ALEJANDRA D.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <img src="botox-treatments.jpg" class="testimonial-img" alt="Cliente 2">
+                        <div>
+                            <p class="testimonial-content">"EXELENTE PRODUCTO"</p>
+                            <p class="testimonial-author">- LUIS L.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <img src="screen-1.jpg" class="testimonial-img" alt="Cliente 3">
+                        <div>
+                            <p class="testimonial-content">"LA MEJOR TIENDA DE LICORES"</p>
+                            <p class="testimonial-author">- LOURDES P.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselTestimonials" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselTestimonials" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div id="footer" class="text-center pb-4 pt-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-lg">
+                        <a href="#">DEBAJAS</a>
+                    </div>
+                    <div class="col-6 col-lg">
+                        <a href="#">INFORMACION</a>
+                    </div>
+                    <div class="col-6 col-lg">
+                        <a href="#">SOBRE LICORES</a>
+                    </div>
+                    <div class="col-6 col-lg">
+                        <a href="#">PROMOCION</a>
+                    </div><div class="col-6 col-lg">
+                        <a href="#">DOMICILIO</a>
+                    </div>
+                     <div class="col-6 col-lg">
+                        <a href="#">REDES</a>
+                        <img src="fotonoticia.jpg" class="social-btn" onclick="window.open('https://www.instagram.com', '_blank')">
+                        <img src="wha.png" class="social-btn" onclick="window.open('https://www.whatsapp.com', '_blank')">
+                        <img src="Twitter-Logo-Png-Transparent-Background.jpg"class="social-btn" onclick="window.open('https://www.twitter.com', '_blank')">
+                        
+                    </div>
+      
+                 </div>
+            </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
